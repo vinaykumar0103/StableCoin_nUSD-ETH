@@ -113,7 +113,7 @@ function StableCoin() {
 
   return (
     <div>
-      <h1>nUSD dApp</h1>
+      <h1>nUSD Stable</h1>
       <p>ETH Price: {ethPrice} USD</p>
       <p>Total Supply: {totalSupply} nUSD</p>
       <h2>Deposit</h2>

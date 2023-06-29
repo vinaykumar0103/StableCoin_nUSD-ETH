@@ -1,6 +1,7 @@
 const { ethers, waffle } = require("hardhat");
 const { expect } = require("chai");
 
+const provider = waffle.provider;
 const { deployContract, loadFixture } = waffle;
 
 describe("StableCoin", function () {
@@ -50,7 +51,7 @@ describe("StableCoin", function () {
     await nusdContract.redeem(nusdAmount);
 
     // Check the user's ETH balance
-    const userEthBalance = await ethers.provider.getBalance(user.address);
+    const userEthBalance = await provider.getBalance(user.address);
     expect(userEthBalance).to.equal(expectedEthAmount);
   });
 });
